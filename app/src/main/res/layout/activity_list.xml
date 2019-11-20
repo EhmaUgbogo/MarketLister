@@ -1,0 +1,134 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:id="@+id/list_activity_rootLayout">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/list_activity_appBarLayout">
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/list_activity_nestedScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="8dp"
+			android:id="@+id/list_activity_mainRelativeLayout">
+
+			<LinearLayout
+				android:id="@+id/list_activity_heading_LinearLayout"
+				android:layout_marginBottom="8dp"
+				android:layout_marginLeft="8dp"
+				android:layout_marginRight="8dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<TextView
+					android:text="Grocery"
+					android:textSize="12sp"
+					android:textStyle="bold"
+					android:layout_weight="6"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content" />
+				<TextView
+					android:text="Qty"
+					android:textSize="12sp"
+					android:textStyle="bold"
+					android:gravity="center_horizontal"
+					android:layout_weight="2"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content" />
+				<TextView
+					android:text="Amt"
+					android:textSize="12sp"
+					android:textStyle="bold"
+					android:layout_marginLeft="8dp"
+					android:layout_weight="3"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content" />
+				<TextView
+					android:text="Added"
+					android:textSize="12sp"
+					android:textStyle="bold"
+					android:layout_weight="2"
+					android:visibility="gone"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content" />
+
+			</LinearLayout>
+
+			<FrameLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="60dp"
+				android:visibility="gone"
+				android:layout_below="@id/list_activity_heading_LinearLayout"
+				android:id="@+id/list_activity_frameLayout">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:gravity="center"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+					<ImageView
+						android:id="@+id/list_activity_emptySearchImageView"
+						android:src="@drawable/search_unsuccessful"
+						android:gravity="center"
+						android:layout_width="120dp"
+						android:layout_height="120dp" />
+
+					<TextView
+						android:id="@+id/list_activity_emptySearchTextView"
+						android:text=""
+						android:textSize="14sp"
+						android:gravity="center"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" />
+				</LinearLayout>
+			</FrameLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/recyclerHighlight"
+				android:layout_below="@id/list_activity_heading_LinearLayout">
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/list_activity_recyclerView"
+					android:overScrollMode="never"
+					android:layout_marginTop="3dp"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"/>
+			</LinearLayout>
+		</RelativeLayout>
+	</androidx.core.widget.NestedScrollView>
+
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		android:id="@+id/list_activity_calculate_fab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|end"
+		android:layout_marginEnd="24dp"
+		android:layout_marginBottom="86dp"
+		app:fabSize="mini"
+		app:elevation="6dp"
+		app:backgroundTint="@android:color/holo_green_light"
+		app:srcCompat="@drawable/ic_layers_white_24dp" />
+
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		android:id="@+id/list_activity_add_fab"
+		android:src="@drawable/ic_add_white_24dp"
+		android:layout_margin="16dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentEnd="true"
+		android:layout_gravity="bottom|end"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,74 @@
+<resources>
+
+    <string name="app_name">MarketLister</string>
+
+    //From Slike. Remember to delete whats not needed
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="priority_list">
+        <item>"Priority - None"</item>
+        <item>"Urgent"</item>
+        <item>"Important"</item>
+    </string-array>
+
+    <string-array name="photo_choice_array">
+        <item>take a photo</item>
+        <item>choose an existing photo</item>
+    </string-array>
+
+    <string-array name="sort_by_array">
+        <item>Recently Added</item>
+        <item>Priority</item>
+    </string-array>
+
+
+
+
+    //Navigation
+    <string name="menu_list">Lists</string>
+    <string name="menu_future">Future</string>
+    <string name="menu_friends_requests">Friends Request</string>
+    <string name="menu_shared">Shared</string>
+
+    //Strings for login and register
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="register_btn_text">Register</string>
+    <string name="register_account_login_here">Already have an account? Login</string>
+    <string name="login_btn_text">Login</string>
+    <string name="login_account_register_here">Don\'t have an account? Register here</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="logout">Logout</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="edit_account">Edit Account</string>
+    <string name="welcome_you_re_logged_in">Welcome! You\'re Logged In</string>
+    <string name="your_solar_cal_text">Your Solar Calculations</string>
+    <string name="use_green_icon_text">New item added, you can use the green icon to see calculations</string>
+    <string name="or">OR</string>
+
+
+    //Unsorted
+    <string name="menu_add_new_accounte">Add New Account</string>
+    <string name="menu_logout">Log Out</string>
+    <string name="registration">Registration</string>
+    <string name="login_text">Login</string>
+    <string name="log_out">Log Out</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="email_sent">Email Sent</string>
+    <string name="email_already_sent">Email Already Sent</string>
+    <string name="email_check">Please check your email address to complete the verification process</string>
+    <string name="email_verify_explainer">This helps for other account setup like change of password.</string>
+    <string name="Ive_confirmed_email">I\'ve Confirmed Email</string>
+    <string name="verify_your_email_btnText">Verify Your Email</string>
+    <string name="wrong_email_re_register">Wrong email? Re-register</string>
+    <string name="view_profile">View Profile</string>
+
+</resources>

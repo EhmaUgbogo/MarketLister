@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/profile_setup_textview"
+                android:text="Profile Setup"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@color/colorAccent"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_profile_image"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/profile_setup_textview"
+                android:elevation="2dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_person_pin_black_24dp"
+                android:transitionName="shared"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="3dp"
+                app:layout_collapseMode="parallax" />
+
+            <TextView
+                android:id="@+id/profile_setup_add_prifile_image_btn"
+                android:text="Add Profile Image"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableEnd="@drawable/ic_edit_dark_grey_24dp"
+                android:drawablePadding="4dp"
+                android:paddingStart="8dp"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_below="@id/profile_profile_image"
+                app:srcCompat="@android:drawable/ic_dialog_email" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_setup_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_margin="4dp"
+                android:layout_below="@id/profile_setup_add_prifile_image_btn"
+                android:hint="Name"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@android:color/white"
+                android:inputType="text"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_setup_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_margin="4dp"
+                android:layout_below="@id/profile_setup_name"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="Email"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@android:color/white"
+                android:inputType="textEmailAddress"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_setup_phoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_margin="4dp"
+                android:layout_below="@id/profile_setup_email"
+                android:inputType="phone"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@android:color/white"
+                android:hint="Phone number"/>
+
+            <Button
+                android:text="Summit"
+                android:id="@+id/profile_setup_summit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_setup_phoneNo"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/fab_margin" />
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/profile_setup_spin_kit"
+        style="@style/SpinKitView.Wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorAccent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

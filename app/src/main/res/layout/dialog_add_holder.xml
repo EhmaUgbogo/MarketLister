@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_background"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:padding="20dp">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/addlist_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logo_list_icon"
+        android:layout_margin="4dp"/>
+
+    <TextView
+        android:id="@+id/addlist_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_below="@id/addlist_logo"
+        android:fontFamily="@font/oensansbold"
+        android:text="Add New List"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/addlist_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addlist_textView"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addlist_name_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@android:color/white"
+            android:drawableStart="@drawable/ic_devices_grey_24dp"
+            android:drawablePadding="16dp"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:hint="Name your list"
+            android:inputType="textCapWords" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addlist_discription_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@android:color/white"
+            android:drawableStart="@drawable/ic_format_list_numbered_grey_24dp"
+            android:drawablePadding="16dp"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:hint="Discribe your list"
+            android:inputType="textMultiLine"
+            android:maxLines="2"/>
+
+        <Spinner
+            android:id="@+id/addlist_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/ef_white"
+            android:padding="4dp"
+            android:entries="@array/priority_list"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addlist_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addlist_linearlayout"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorAccent"
+        android:elevation="2dp"
+        android:text="Add Appliance"
+        android:textColor="@color/ef_white" />
+
+    <ProgressBar
+        android:id="@+id/addlist_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

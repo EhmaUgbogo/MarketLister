@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_item_RelativeLayout"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/dialog_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_item_groceryInputLayout"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_item_mainEditText"
+            android:inputType="textCapWords|text"
+            android:hint="Add a Grocery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/add_item_quantityTextView"
+        android:text="1"
+        android:textSize="40sp"
+        android:layout_marginTop="62dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_item_amountInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/add_item_groceryInputLayout"
+        android:layout_below="@id/add_item_groceryInputLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_item_amountEditText"
+            android:hint="Amount"
+            android:inputType="number"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/add_item_buttonDecrease"
+        android:text="-"
+        android:layout_toStartOf="@id/add_item_quantityTextView"
+        android:layout_alignTop="@id/add_item_quantityTextView"
+        android:layout_alignBottom="@id/add_item_quantityTextView"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/add_item_buttonIncrease"
+        android:text="+"
+        android:layout_toEndOf="@id/add_item_quantityTextView"
+        android:layout_alignTop="@id/add_item_quantityTextView"
+        android:layout_alignBottom="@id/add_item_quantityTextView"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/add_item_buttonAdd"
+        android:text="Add"
+        android:layout_toEndOf="@id/add_item_buttonIncrease"
+        android:layout_alignTop="@id/add_item_buttonIncrease"
+        android:layout_alignBottom="@id/add_item_buttonIncrease"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
